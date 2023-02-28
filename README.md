@@ -3,7 +3,7 @@
 Example ROS node for basic movement control in TurtleSim :)
 
 ## How to Run
-Assuming you've followed the setup instructions sent out prior to the meeting, you should be able to run this code as follows:
+Assuming you've followed the setup instructions sent out prior to the meeting (if not, see [setup instructions](#setup-instructions) below), you should be able to run this code as follows:
 
 First, you should know which shell you are using (bash, zsh, etc). If you don't, run
 ```sh
@@ -93,5 +93,18 @@ ls
 you should see three directory names; `build`, `devel`, and `src`. The entire contents of this github repo should be in the `src` directory, inside a directory called `turtle_demo`. If you alredy have git installed on your computer, you can accomplish this simply by running
 ```sh
 cd src
-git clone 
+git clone https://github.com/Tufts-Robotics-Club/ROS-Workshop-2023.git
+mv ROS-Workshop-2023 turtle_demo
 ```
+
+If you do not have git installed, scroll to the top of this page and click the green "code" button, and then "Download ZIP" in the dropdown menu. Move the resulting ZIP file into the `~/catkin_ws/src` directory on your computer, unzip it, and rename the resulting directory to `turtle_demo`.
+
+Once you have the code in the right place, run
+
+```sh
+cd ~/catkin_ws
+source devel/setup.sh
+catkin_make
+```
+
+If those commands complete without error, you should be good to go :)
