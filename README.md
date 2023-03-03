@@ -142,7 +142,7 @@ This starter code should send the turtle moving in a random direction, bouncing 
 
 - Move to particular coordinates (randomly-generated, or given as command line input)
 
-The full list of message topics (as well as their types) that the turlesim nodes publishes and is subscribed to can be found [here](http://wiki.ros.org/turtlesim). Happy coding!
+The full list of message topics (as well as their types) that the turtlesim nodes publishes and is subscribed to can be found [here](http://wiki.ros.org/turtlesim). Happy coding!
 
 ## Setup Instructions
 
