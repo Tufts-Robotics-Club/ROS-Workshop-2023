@@ -33,6 +33,16 @@ SUMMARY
 PARAMETERS
  * /rosdistro: noetic
  * /rosversion: 1.15.14
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [68833]
+ROS_MASTER_URI=http://Emmas-MacBook-Pro.local:11311/
+
+setting /run_id to d212418c-b9fe-11ed-a83f-fed2a189e5b7
+process[rosout-1]: started with pid [68834]
+started core service [/rosout]
 ```
 
 In a separate command line window (while ros master continues running in the old one), run
@@ -87,6 +97,16 @@ SUMMARY
 PARAMETERS
  * /rosdistro: noetic
  * /rosversion: 1.15.15
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [68833]
+ROS_MASTER_URI=http://http://127.0.0.1:11311/
+
+setting /run_id to d212418c-b9fe-11ed-a83f-fed2a189e5b7
+process[rosout-1]: started with pid [68834]
+started core service [/rosout]
 ```
 
 In a separate anaconda prompt window (while ros master continues running in the old one), run
@@ -122,9 +142,7 @@ This starter code should send the turtle moving in a random direction, bouncing 
 
 - Move to particular coordinates (randomly-generated, or given as command line input)
 
-- Add another turtle & make them bounce off each other
-
-- Add like 10 turtles and make them ALL bounce off each other like a really sadistic aquarium
+The full list of message topics (as well as their types) that the turlesim nodes publishes and is subscribed to can be found [here](http://wiki.ros.org/turtlesim). Happy coding!
 
 ## Setup Instructions
 

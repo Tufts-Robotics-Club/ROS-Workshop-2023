@@ -25,7 +25,6 @@ class TurtleController:
         self.current_coords = np.array(CENTER)
         self.rate = rospy.Rate(10)
 
-
         # initializing publisher for sending turtle velocity commands
         self.vel_pub = rospy.Publisher('turtle1/cmd_vel', Twist, queue_size=10)
 
@@ -41,6 +40,12 @@ class TurtleController:
             self.handle_collisions()
 
             # sending velocity command
+            #   3 possible components of velocity message (as per turtlesim 
+            #   documentation):
+            #       linear.x - forward (direction turtle is facing) velocity
+            #       linear.y - strafe (perpendicular to direction turtle is 
+            #                  facing) velocity
+            #       anglular.z - angular velocity
             msg = Twist()
             msg.linear.x = self.current_vel[0]
             msg.linear.y = self.current_vel[1]
