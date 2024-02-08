@@ -10,7 +10,7 @@ In a terminal window, run
 
 ```sh
 # set up environment
-conda activate robostackenv
+conda activate ros_env
 cd ~/catkin_ws
 source devel/setup.sh
 
@@ -48,7 +48,7 @@ started core service [/rosout]
 In a separate command line window (while ros master continues running in the old one), run
 ```sh
 # set up environment
-conda activate robostackenv
+conda activate ros_env
 cd ~/catkin_ws
 source devel/setup.sh
 
@@ -60,7 +60,7 @@ This should open a pop-up window with an unmoving turtle in the middle of it.
 In a 3rd command line window, run
 ```sh
 # set up environment
-conda activate robostackenv
+conda activate ros_env
 cd ~/catkin_ws
 source devel/setup.sh
 
@@ -74,7 +74,7 @@ In an anaconda prompt window, run
 
 ```sh
 # set up environment
-conda activate robostackenv
+conda activate ros_env
 cd ~\catkin_ws
 source devel\setup.bat
 
@@ -112,7 +112,7 @@ started core service [/rosout]
 In a separate anaconda prompt window (while ros master continues running in the old one), run
 ```sh
 # set up environment
-conda activate robostackenv
+conda activate ros_env
 cd ~\catkin_ws
 source devel\setup.bat
 
@@ -124,7 +124,7 @@ This should open a pop-up window with an unmoving turtle in the middle of it.
 In a 3rd anaconda prompt window, run
 ```sh
 # set up environment
-conda activate robostackenv
+conda activate ros_env
 cd ~\catkin_ws
 source deve\setup.bat
 
@@ -146,7 +146,7 @@ The full list of message topics (as well as their types) that the turtlesim node
 
 ## Setup Instructions
 
-For this workshop, we will be running ROS in a conda environment using robostackenv. [Here](https://robostack.github.io/GettingStarted.html) are instructions on how to install conda, create a conda environment, and install robostackenv into it. You should follow the instructions under "Installation mamba", "Installation ros", and "Installation tools for local development". We will be using ROS1 for this workshop, so you can ignore anything that says it's for ROS2 only.
+For this workshop, we will be running ROS in a conda environment using robostack. [Here](https://robostack.github.io/GettingStarted.html) are instructions on how to install conda, create a conda environment, and install robostack into it. You should follow the instructions under "Installation mamba", "Installation ros", and "Installation tools for local development". We will be using ROS1 for this workshop, so you can ignore anything that says it's for ROS2 only.
 
 Once you've got everything installed, you can set up your ROS environment as follows:
 
