@@ -146,35 +146,31 @@ The full list of message topics (as well as their types) that the turtlesim node
 
 ## Setup Instructions
 
-For this workshop, we will be running ROS in a conda environment using robostackenv. If you don't have anaconda installed on your computer, you should first do that [here](https://docs.conda.io/en/latest/miniconda.html). The default settings suggested by the installer should be fine.
+For this workshop, we will be running ROS in a conda environment using robostackenv. [Here](https://robostack.github.io/GettingStarted.html) are instructions on how to install conda, create a conda environment, and install robostackenv into it. You should follow the instructions under "Installation mamba", "Installation ros", and "Installation tools for local development". We will be using ROS1 for this workshop, so you can ignore anything that says it's for ROS2 only.
+
+Once you've got everything installed, you can set up your ROS environment as follows:
 
 ### MacOS
 
-Once you've installed anaconda, open a terminal window and enter the following commands:
+In a terminal window, enter the following commands:
 
 ```sh
-# installing all the dependencies into a conda environment (this one will take a while; when it prompts you for input, just hit enter)
-conda create -n robostackenv ros-noetic-desktop python=3.9 -c robostack-staging -c conda-forge --no-channel-priority --override-channels
-
 # activating the environment you just created
-conda activate robostackenv
+conda activate ros_env
 
 # creating a file structure for your ROS stuff
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
 catkin_make
 ```
-If those commands complete without throwing errors, your environment should be set up! If you now run `ls`, you should see three directory names; `build`, `devel`, and `src`.
+If those commands complete without throwing errors, your environment should be set up correctly! If you now run `ls`, you should see three directory names; `build`, `devel`, and `src`.
 
-The entire contents of this github repo should be in the `src` directory, inside a directory called `turtle_demo`. If you alredy have git installed on your computer, you can accomplish this simply by running
+The entire contents of this github repo should be in the `src` directory, inside a directory called `turtle_demo`. You can accomplish this by running
 ```sh
 cd src
 git clone https://github.com/Tufts-Robotics-Club/ROS-Workshop-2023.git
 mv ROS-Workshop-2023 turtle_demo
 ```
-
-If you do not have git installed, scroll to the top of this page and click the green "code" button, and then "Download ZIP" in the dropdown menu. Move the resulting ZIP file into the `~/catkin_ws/src` directory on your computer, unzip it, and rename the resulting directory to `turtle_demo`.
-
 Once you have the code in the right place, run
 
 ```sh
@@ -186,31 +182,13 @@ catkin_make
 If those commands complete without error, you should be good to go :)
 
 ### Windows
-**Disclaimer:** For whatever reason, the setup process on Windows is significantly more annoying than the MacOS one. If you have a friend with a Mac who is also coming to the workshop I would highly recommend just sharing with them!
+First, type "Anaconda" into the start menu. You should see two shell options: one called Anaconda Prompt and another called Anaconda Powershell Prompt. Make sure to pick Anaconda Prompt; the Powershell version, for whatever reason, doesn't work for this particular application.
 
-Type "Anaconda" into the start menu. You should see two shell options: one called Anaconda Prompt and antoher called Anaconda Powershell Prompt. Make sure to pick Anaconda Prompt; the powershell version, for whatever reason, doesn't work for this particular application.
-
-Once you've found the correct shell, run the following commands:
-```sh
-# installing all the dependencies into a conda environment (this one will take a while; when it prompts you for input, just hit enter)
-conda create -n robostackenv ros-noetic-desktop python=3.9 -c robostack-staging -c conda-forge --no-channel-priority --override-channels
-
-# activating the environment you just created
-conda activate robostackenv
-```
-
-Now here comes the annoying part: installing Visual Studio. Note that this is NOT the same as Visual Studio Code, which is a text editor you may have installed for CS11 or 15; Visual Studio is a full IDE (integrated development environment) with C/C++ compiler support that is, for some reason, necessary for the software we're using to run ROS. You can install Visual Studio 2019 (make sure it's the 2019 version!) with C/C++ support [here](https://learn.microsoft.com/en-us/cpp/build/vscpp-step-0-installation?view=msvc-160); the community version is free.
-
-Once VSCode is installed, return to your command window. Run
-```sh
-conda install vs2019_win-64
-```
-
-to allow your ROS environment to find those C/C++ dependencies. Then, close this window and open a new one (still with the Anaconda Prompt application). In this window, run
+In this shell, run
 
 ```sh
 # activating the environment
-conda activate robostackenv
+conda activate ros_env
 
 # creating a file structure for your ROS stuff
 mkdir -p ~\catkin_ws\src
@@ -220,7 +198,7 @@ catkin_make
 
 If those commands complete without throwing errors, your environment should be set up! If you now run `dir`, you should see three directory names; `build`, `devel`, and `src`.
 
-The entire contents of this github repo should be put in the `src` directory, inside a directory called `turtle_demo`. If you alredy have git installed on your computer, you can accomplish this simply by running
+The entire contents of this Github repo should be put in the `src` directory, inside a directory called `turtle_demo`. If you already have git installed on your computer, you can accomplish this simply by running
 ```sh
 cd src
 git clone https://github.com/Tufts-Robotics-Club/ROS-Workshop-2023.git
